@@ -6,18 +6,17 @@ class Solution {
         int lmax = height[0];
         int rmax = height[r];
         while(l<r){
-            if(height[l]<height[r]){
                 lmax = Math.max(lmax,height[l]);
-                if(lmax-height[l]>0){
+                rmax = Math.max(rmax,height[r]);
+            if(height[l]<=height[r]){
                     total = total + lmax -height[l];
-                }
+            
                 l++;
             }
             else {
-                rmax = Math.max(rmax,height[r]);
-                if(rmax-height[r]>0){
+            
                     total = total + rmax - height[r];
-                }
+                
                 r--;
             }
         }
