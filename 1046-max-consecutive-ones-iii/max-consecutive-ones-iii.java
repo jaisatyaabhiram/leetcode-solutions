@@ -8,7 +8,7 @@ class Solution {
             if(nums[right]==0){
                 zeros++;
             }
-            while(zeros>k){
+            if(zeros>k){
                 if(nums[left]==0){
                     zeros--;
                 }
